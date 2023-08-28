@@ -4,15 +4,19 @@
     align-items: center;
     background: #252525;
     padding: 3rem;
+    border-bottom: 3px solid #3c3d3c;
 
     h1{
         font-size: 6rem;
         color: #FFFFFF;
         font-weight: normal;
         user-select: none;
-        animation: headingFadeIn 0.5s forwards;
+        opacity: 0;
+        transform: translateY(-100px);
+        animation: headingFadeIn 0.8s 0.2s forwards;
         transition: all 0.3s;
         position: relative;
+        letter-spacing: 0.2rem;
 
         &::after{
             content: "";
