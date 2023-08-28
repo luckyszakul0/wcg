@@ -1,0 +1,48 @@
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #252525;
+    padding: 3rem;
+
+    h1{
+        font-size: 6rem;
+        color: #FFFFFF;
+        font-weight: normal;
+        user-select: none;
+        animation: headingFadeIn 0.5s forwards;
+        transition: all 0.3s;
+        position: relative;
+
+        &::after{
+            content: "";
+            transform: translateX(-50%);
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            height: 5px;
+            background: #02d630;
+            width: 0%;
+            transition: all 0.3s;
+        }
+
+        &:hover{
+            text-shadow: 15px 8px 2px #353535;
+        }
+
+        &:hover::after{
+            width: 100%;
+        }
+    }
+}
+
+@keyframes headingFadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
