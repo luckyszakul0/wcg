@@ -1,4 +1,5 @@
 .banner{
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,23 +19,27 @@
         position: relative;
         letter-spacing: 0.2rem;
 
+        @media screen and (max-width: 560px){
+            font-size: 3rem;
+        }
+
         &::after{
             content: "";
             transform: translateX(-50%);
             position: absolute;
-            bottom: 10px;
+            bottom: 0;
             left: 50%;
-            height: 10px;
-            background: #02d630;
+            height: 7.5px;
+            background: hsl(133, 98%, 42%);
             width: 0%;
             transition: all 0.3s;
         }
 
-        &:hover{
+        &:is(:hover, :focus){
             text-shadow: 15px 8px 2px #353535;
         }
 
-        &:hover::after{
+        &:is(:hover, :focus)::after{
             width: 100%;
         }
     }

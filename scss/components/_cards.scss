@@ -6,6 +6,8 @@
     background-position: center;
     transition: all 0.3s;
     cursor: pointer;
+    background-color: #4a651e;
+    background-repeat: no-repeat;
     
     //used to stretch the divs to the desired size as background image doesn't count as content
     &::after{
@@ -22,8 +24,8 @@
 }
 
 .hovered{
-    border: 3px solid #cac8c8;
-    box-shadow: 0 0 50px hsla(0, 100%, 100%, 0.6);
+    border: 3px solid hsl(133, 98%, 42%);
+    box-shadow: 0 0 50px hsla(133, 98%, 42%, 0.6);
 }
 
 .not-hovered{
@@ -31,6 +33,10 @@
 }
 
 .clicked{
-    transform: scale(1.5);
+    transform: scale(1.4);
     z-index: 100;
+
+    @media screen and (max-width: 560px){
+        transform: scale(1.25);
+    }
 }

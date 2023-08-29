@@ -7,11 +7,12 @@
     padding: 3rem 0;
 
     a{
-        color: #4a4b4a;
+        color: #616161;
         text-decoration: none;
+        transition: all 0.3s;
 
         &:hover{
-            text-shadow: 0 0 10px #4a4b4a;
+            text-shadow: 0 0 10px #616161;
         }
     }
 }
